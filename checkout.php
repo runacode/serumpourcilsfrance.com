@@ -4,6 +4,7 @@ include 'includes/data.php';
 $nostatecheckout = ['DE', 'FR', 'UK'];
 if (in_array(strtoupper($data->country_1), $nostatecheckout)) {
     require_once(dirname(__FILE__) . "/checkout-no-state.php");
+    die();
 
 }
 

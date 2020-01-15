@@ -48,8 +48,8 @@ $ksdk = new KonnektiveSDK($pageType, $deviceType);
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
     <script>
-        window.product = JSON.parse('<?php echo json_encode($product); ?>');
-        window.data = JSON.parse('<?php echo json_encode($data); ?>');
+        window.product = <?php echo json_encode($product); ?>;
+        window.data = <?php echo json_encode($data); ?>;
     </script>
     <script src="/resources/js/cart.min.js?rand=<?php echo rand(0,1000); ?>"></script>
     <style>body {

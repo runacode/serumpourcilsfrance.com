@@ -1,9 +1,8 @@
 <?php
 
 
-
 $locales = GetPrefLocale();
-$languagefile = dirname(__FILE__). "/en.json";
+$languagefile = dirname(__FILE__) . "/en.json";
 
 $CurrentLocale = "en";
 $lang = json_decode(file_get_contents($languagefile), true);
@@ -12,8 +11,8 @@ $languages['en'] = $lang;
 $found = false;
 
 
-if (isset($_REQUEST['lang']) && strlen($_REQUEST['lang']) < 5 && !preg_match('/[^a-zA-Z-]/',$_REQUEST['lang'])) {
-    $languagefile = dirname(__FILE__). "/" . $_REQUEST['lang'] . ".json";
+if (isset($_REQUEST['lang']) && strlen($_REQUEST['lang']) < 5 && !preg_match('/[^a-zA-Z-]/', $_REQUEST['lang'])) {
+    $languagefile = dirname(__FILE__) . "/" . $_REQUEST['lang'] . ".json";
 
     if (file_exists($languagefile)) {
 
@@ -24,21 +23,20 @@ if (isset($_REQUEST['lang']) && strlen($_REQUEST['lang']) < 5 && !preg_match('/[
         $CurrentLocale = $_REQUEST['lang'];
         $found = true;
     }
-}elseif (isset($data) && isset($data->lang)  && $data->lang ) {
-    $languagefile = dirname(__FILE__). "/" .$data->lang . ".json";
+} elseif (isset($data) && isset($data->lang) && $data->lang) {
+    $languagefile = dirname(__FILE__) . "/" . $data->lang . ".json";
     if (file_exists($languagefile)) {
 
-        $CurrentLocale = $data->lang ;
+        $CurrentLocale = $data->lang;
         $lang = json_decode(file_get_contents($languagefile), true);
         $info = pathinfo($languagefile);
-        $languages[$data->lang ] = $lang;
-        $CurrentLocale = $data->lang ;
+        $languages[$data->lang] = $lang;
+        $CurrentLocale = $data->lang;
         $found = true;
     }
-}
-else {
+} else {
     foreach (array_keys($locales) as $locale) {
-        $languagefile = dirname(__FILE__). "/" . $locale . ".json";
+        $languagefile = dirname(__FILE__) . "/" . $locale . ".json";
 
         if (file_exists($languagefile)) {
             $lang = json_decode(file_get_contents($languagefile), true);
@@ -56,10 +54,10 @@ $CurrentLanguage = $languages[$CurrentLocale];
 
 function T($str)
 {
-    global $CurrentLanguage,$CurrentLocale;
+    global $CurrentLanguage, $CurrentLocale;
+    if (isset($_REQUEST['strict-lang'])) {
+        if (!isset($CurrentLanguage[$str]) || strlen(trim($CurrentLanguage[$str])) == 0) {
 
-    if (!isset($CurrentLanguage[$str]) || strlen(trim($CurrentLanguage[$str])) == 0) {
-        if (isset($_REQUEST['strict-lang'])) {
 
             ?>
             <h2> MISSING <?= $str; ?></h2>

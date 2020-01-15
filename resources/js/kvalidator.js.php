@@ -1,3 +1,10 @@
+<?php
+
+    function K($str){
+        return str_replace("'","\\'" ,T($str));
+    }
+
+?>
 kvalidate_config = {};
 kvalidate_config.submitErrorPosition = 'dialog';
 kvalidate_config.inputErrorDisplayType = 'popup';
@@ -9,65 +16,65 @@ if(!kvalidate_config)
     kvalidate_config = {};
 
 kvalidate_config.placeHolders = {
-	firstName:'<?= T('First Name'); ?>',
-	lastName:'<?= T('Last Name'); ?>',
-	emailAddress:'<?= T('Email Address'); ?>',
-	phoneNumber:'<?= T('Phone Number'); ?>',
-	address1:'<?= T('Address'); ?>',
-	address2:'<?= T('Address Line 2'); ?>',
-	city:'<?= T('City'); ?>',
-	state:'<?= T('State'); ?>',
-	country:'<?= T('Country'); ?>',
-	postalCode:'<?= T('Postal Code'); ?>',
-	shipAddress1:'<?= T('Address Line 1'); ?>',
-	shipAddress2:'<?= T('Address Line 2'); ?>',
-	shipCity:'<?= T('City'); ?>',
-	shipState:'<?= T('State'); ?>',
-	shipCountry:'<?= T('Country'); ?>',
-	shipPostalCode:'<?= T('Postal Code'); ?>',
-	cardNumber:'<?= T('Credit Card #'); ?>',
-	cardSecurityCode:'<?= T('CVV Code'); ?>',
-	achAccountNumber:'<?= T('Account #'); ?>',
-	achRoutingNumber:'<?= T('Routing #'); ?>',
-	achAccountHolderType:'<?= T('Account Holder'); ?>',
-	achAccountType:'<?= T('Account Type'); ?>',
-	billShipSame:'<?= T('Billing Same as Shipping Address'); ?>',
-	couponCode:'<?= T('Coupon Code'); ?>',
-	taxExemption:'<?= T('Tax Exemption No.'); ?>'
+	firstName:'<?= K('First Name'); ?>',
+	lastName:'<?= K('Last Name'); ?>',
+	emailAddress:'<?= K('Email Address'); ?>',
+	phoneNumber:'<?= K('Phone Number'); ?>',
+	address1:'<?= K('Address'); ?>',
+	address2:'<?= K('Address Line 2'); ?>',
+	city:'<?= K('City'); ?>',
+	state:'<?= K('State'); ?>',
+	country:'<?= K('Country'); ?>',
+	postalCode:'<?= K('Postal Code'); ?>',
+	shipAddress1:'<?= K('Address Line 1'); ?>',
+	shipAddress2:'<?= K('Address Line 2'); ?>',
+	shipCity:'<?= K('City'); ?>',
+	shipState:'<?= K('State'); ?>',
+	shipCountry:'<?= K('Country'); ?>',
+	shipPostalCode:'<?= K('Postal Code'); ?>',
+	cardNumber:'<?= K('Credit Card #'); ?>',
+	cardSecurityCode:'<?= K('CVV Code'); ?>',
+	achAccountNumber:'<?= K('Account #'); ?>',
+	achRoutingNumber:'<?= K('Routing #'); ?>',
+	achAccountHolderType:'<?= K('Account Holder'); ?>',
+	achAccountType:'<?= K('Account Type'); ?>',
+	billShipSame:'<?= K('Billing Same as Shipping Address'); ?>',
+	couponCode:'<?= K('Coupon Code'); ?>',
+	taxExemption:'<?= K('Tax Exemption No.'); ?>'
 };
 
 kvalidate_config.requiredErrors = {
-	firstName: '<?= T('First Name is required'); ?>',
-	lastName: '<?= T('Last Name is required'); ?>',
-	emailAddress: '<?= T('Email is required'); ?>',
-	phoneNumber: '<?= T('Phone Number is required'); ?>',
-	address1: '<?= T('Address is a Required Value'); ?>',
-	address2: '<?= T('Address Line 2 is a Required Value'); ?>',
-	city: '<?= T('City is a Required Value'); ?>',
-	state: '<?= T('State is a Required Value'); ?>',
-	country: '<?= T('Country is a Required Value'); ?>',
-	postalCode: '<?= T('Postal Code is a Required Value'); ?>',
-	shipAddress1: '<?= T('Address Line 1 is a Required Value'); ?>',
-	shipAddress2: '<?= T('Address Line 2 is a Required Value'); ?>',
-	shipCity: '<?= T('City is a Required Value'); ?>',
-	shipState: '<?= T('State is a Required Value'); ?>',
-	shipCountry: '<?= T('Country is a Required Value'); ?>',
-	shipPostalCode: '<?= T('Postal Code is a Required Value'); ?>',
-	confirmTOS: '<?= T('You Must Agree to the Terms and Conditions'); ?>',
-	cardNumber: '<?= T('Card Number is a Required Value'); ?>',
-	cardExpiryDate: '<?= T('Expiration Date is a Required Value'); ?>',
-	cardSecurityCode: '<?= T('SecurityCode is a Required Value'); ?>',
-	achAccountHolderType: '<?= T('Account Holder is a Required Value'); ?>',
-	achAccountType: '<?= T('Account Type is a Required Value'); ?>',
-	achAcountNumber: '<?= T('Account # is a Required Value');?>',
-	achRoutingNumber: '<?= T('Routing # is a Required Value');?>'
+	firstName: '<?= K('First Name is required'); ?>',
+	lastName: '<?= K('Last Name is required'); ?>',
+	emailAddress: '<?= K('Email is required'); ?>',
+	phoneNumber: '<?= K('Phone Number is required'); ?>',
+	address1: '<?= K('Address is a Required Value'); ?>',
+	address2: '<?= K('Address Line 2 is a Required Value'); ?>',
+	city: '<?= K('City is a Required Value'); ?>',
+	state: '<?= K('State is a Required Value'); ?>',
+	country: '<?= K('Country is a Required Value'); ?>',
+	postalCode: '<?= K('Postal Code is a Required Value'); ?>',
+	shipAddress1: '<?= K('Address Line 1 is a Required Value'); ?>',
+	shipAddress2: '<?= K('Address Line 2 is a Required Value'); ?>',
+	shipCity: '<?= K('City is a Required Value'); ?>',
+	shipState: '<?= K('State is a Required Value'); ?>',
+	shipCountry: '<?= K('Country is a Required Value'); ?>',
+	shipPostalCode: '<?= K('Postal Code is a Required Value'); ?>',
+	confirmTOS: '<?= K('You Must Agree to the Terms and Conditions'); ?>',
+	cardNumber: '<?= K('Card Number is a Required Value'); ?>',
+	cardExpiryDate: '<?= K('Expiration Date is a Required Value'); ?>',
+	cardSecurityCode: '<?= K('SecurityCode is a Required Value'); ?>',
+	achAccountHolderType: '<?= K('Account Holder is a Required Value'); ?>',
+	achAccountType: '<?= K('Account Type is a Required Value'); ?>',
+	achAcountNumber: '<?= K('Account # is a Required Value');?>',
+	achRoutingNumber: '<?= K('Routing # is a Required Value');?>'
 };
 
 //-message displayed when a field fails validation
 kvalidate_config.invalidErrors = {
-	emailAddress: '<?= T('Email Address is Invalid'); ?>',
-	phoneNumber: '<?= T('Phone Number is Invalid'); ?>',
-	cardNumber: '<?= T('Card Number is Invalid'); ?>'
+	emailAddress: '<?= K('Email Address is Invalid'); ?>',
+	phoneNumber: '<?= K('Phone Number is Invalid'); ?>',
+	cardNumber: '<?= K('Card Number is Invalid'); ?>'
 };
 
 //-other error messages
@@ -78,16 +85,16 @@ kvalidate_config.invalidErrors = {
 //
 
 kvalidate_config.otherErrors = {
-	cardExpired: '<?= T('You Entered an Expired Date'); ?>',
-	cartEmpty: '<?= T('You must select a product to checkout'); ?>',
-	blackList: '<?= T('Your account has been blacklisted'); ?>',
-	prepaid: '<?= T('Prepaid cards are not allowed'); ?>',
-	debit: '<?= T('Debit cards are not allowed'); ?>',
-	mastercard: '<?= T('Mastercard is not allowed'); ?>',
-	trialDedup: '<?= T('You have already purchased this product'); ?>',
-	decline: '<?= T('Your card has been declined. Please try a new card'); ?>',
-	declineDedup: '<?= T('This card has already declined. Please try a new card'); ?>',
-	paymentProcessing: '<?= T('Your payment is processing. Please wait'); ?>'
+	cardExpired: '<?= K('You Entered an Expired Date'); ?>',
+	cartEmpty: '<?= K('You must select a product to checkout'); ?>',
+	blackList: '<?= K('Your account has been blacklisted'); ?>',
+	prepaid: '<?= K('Prepaid cards are not allowed'); ?>',
+	debit: '<?= K('Debit cards are not allowed'); ?>',
+	mastercard: '<?= K('Mastercard is not allowed'); ?>',
+	trialDedup: '<?= K('You have already purchased this product'); ?>',
+	decline: '<?= K('Your card has been declined. Please try a new card'); ?>',
+	declineDedup: '<?= K('This card has already declined. Please try a new card'); ?>',
+	paymentProcessing: '<?= K('Your payment is processing. Please wait'); ?>'
 };
 
 window.DiscountMessage ='<?=t('The discount expires in'); ?>';

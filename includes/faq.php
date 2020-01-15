@@ -1,6 +1,5 @@
 <div class="rc-faq">
     <h3><?= T('Sales'); ?></h3>
-
     <h5><?= T('I found that in my purchase only contained two products. I get the third free product?'); ?></h5>
     <p><?= T('Don\'t worry, will arrive at your place all the three products! Our shipping agent specializes in detecting this type of error, he will add the third free iten to your order!'); ?></p>
 

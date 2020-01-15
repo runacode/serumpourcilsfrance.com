@@ -1,8 +1,8 @@
 {
-"country_1": "DE",
-  "country_2": "Deutschland",
+"country_1": "FR",
+  "country_2": "France",
   "currency": "&#8364;",
- "lang": "de",
+ "lang": "fr",
   "FaceBookCurrency": "EUR",
   "products": [
     {
@@ -14,20 +14,20 @@
       "price": 11.97,
       "old_price": 30,
       "old_price_u1": 39.95,
-      "name": "<b>Feg Serum</b> - Eyelash Enhancer",
-      "one_free": "1 Free",
-      "discount_expires": "Der Rabatt verfällt in",
-      "discount": "Rabatt",
+      "name": "<b>Feg Serum</b> - Agrandisseur de cils",
+      "one_free": "1 GRATUIT",
+      "discount_expires": "Votre promo expire le ",
+      "discount": "ÉCONOMISEZ",
       "rewiews_mark": "9.8",
-      "excellent": "Ausgezeichnet",
-      "num_reviews": "49 Bewertungen",
-      "buy_2_get_1": "Kaufen Sie 2 und erhalten Sie 1 kostenlos",
-      "satisfaction_guaranteed": "Satisfaction<br>Guaranteed",
-      "add_to_cart": "in den Warenkorb legen",
-      "support_email": "support@domain.com",
-      "rand_head": "Kostenloser Versand bis zum Wochenende",
+      "excellent": "EXCELENT",
+      "num_reviews": "52 COMMENTAIRES",
+      "buy_2_get_1": "Acheter-en 2 obtenez-en 1 gratuit",
+      "satisfaction_guaranteed": "Satisfaction<br> Garantie",
+      "add_to_cart": "Ajouter au chariot",
+      "support_email": "support@serumpourcilsfrance.com",
+      "rand_head": "FR - 60% DE RÉDUCTION SEULEMENT AUJOURD'HUI!",
       "logos": "../resources/images/logos.jpg",
-      "head": "DE - 60% RABATT NUR HEUTE! "
+      "head": "FR - 60% DE RÉDUCTION SEULEMENT AUJOURD'HUI! "
     }
   ]
 }

@@ -1,15 +1,11 @@
 <?php
 
 include 'includes/data.php';
-$nostatecheckout =['DE','FR','UK'];
-if(in_array(strtoupper($data->country1),$nostatecheckout)) {
-    $city = dirname(__FILE__) . "/checkout-no-state.php";
-}
-if (file_exists($city)) {
-    require_once($city);
-    die();
-}
+$nostatecheckout = ['DE', 'FR', 'UK'];
+if (in_array(strtoupper($data->country_1), $nostatecheckout)) {
+    require_once(dirname(__FILE__) . "/checkout-no-state.php");
 
+}
 
 
 //This code must be included at the top of your script before any output is sent to the browser
@@ -53,7 +49,7 @@ $ksdk = new KonnektiveSDK($pageType, $deviceType);
         window.product = <?php echo json_encode($product); ?>;
         window.data = <?php echo json_encode($data); ?>;
     </script>
-    <script src="/resources/js/cart.min.js?rand=<?php echo rand(0,1000); ?>"></script>
+    <script src="/resources/js/cart.min.js?rand=<?php echo rand(0, 1000); ?>"></script>
     <style>body {
             margin: 8px !important;
         }</style>
@@ -280,7 +276,7 @@ $ksdk = new KonnektiveSDK($pageType, $deviceType);
 <?php
 
 $pageEvent = "InitiateCheckout";
-$qs = ["Event"=>$pageEvent];
+$qs = ["Event" => $pageEvent];
 include_once('pixelcode/pixelhelper.php');
 
 

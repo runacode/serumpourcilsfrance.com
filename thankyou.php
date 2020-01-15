@@ -87,7 +87,7 @@ $currency = $ksdk->currencySymbol;
         <h3 class="main-title mt-4">
             <?= T('Thank you'); ?> <?php echo $customerName ?>!<br>
             <?= T('Your order is confirmed'); ?> <br>
-            <?= T('ORDER#:'); ?> <?php echo $orderId ?>
+            <?= T('ORDER#'); ?>: <?php echo $orderId ?>
         </h3>
 
         <div class="below-thank-you mt-2"> <?= T('You’ll receive a confirmation email with your order number shortly'); ?></div>
@@ -105,7 +105,7 @@ $currency = $ksdk->currencySymbol;
                 <div style="float:right">
                     <div class="kthanks_spacer">
                         <div class="kthanks_label">
-                            <?= T('SubTotal:'); ?>
+                            <?= T('SubTotal'); ?>:
                         </div>
                         <?php echo $currency . $subTotal ?>
                     </div>
@@ -118,7 +118,7 @@ $currency = $ksdk->currencySymbol;
                     <?php if ($taxTotal > 0) { ?>
                         <div class="kthanks_spacer">
                             <div class="kthanks_label">
-                                <?= T('Tax:'); ?>
+                                <?= T('Tax'); ?>:
                             </div>
                             <?php echo $currency . $taxTotal ?>
                         </div>
@@ -126,7 +126,7 @@ $currency = $ksdk->currencySymbol;
                     <?php if ($insuranceTotal > 0) { ?>
                         <div class="kthanks_spacer">
                             <div class="kthanks_label">
-                                <?= T('Insurance:'); ?>
+                                <?= T('Insurance'); ?>:
                             </div>
                             <?php echo $currency . $insuranceTotal ?>
                         </div>
@@ -134,14 +134,14 @@ $currency = $ksdk->currencySymbol;
                     <?php if ($discountTotal > 0) { ?>
                         <div class="kthanks_spacer" style="color:green">
                             <div class="kthanks_label">
-                                <?= T('Discount:'); ?>
+                                <?= T('Discount'); ?>:
                             </div>
                             <?php echo $currency . $discountTotal ?>
                         </div>
                     <?php } ?>
                     <div class="kthanks_spacer" style="border-top:1px solid #CCC">
                         <div class="kthanks_label">
-                            <?= T('Grand Total:'); ?>
+                            <?= T('Grand Total'); ?>:
                         </div>
                         <?php echo $currency . $orderTotal ?>
                     </div>

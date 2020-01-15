@@ -115,8 +115,9 @@ include 'includes/data.php';
     </script>
     <?php
 
-    $PixelPage="/upsell.html";
-
+    $pageEvent = "Purchase";
+    $Value = array("value" => $orderTotal, 'currency' => $data->FaceBookCurrency);
+    $qs = ["Event"=>$pageEvent,"Value"=>$Value];
     include_once('pixelcode/pixelhelper.php');
 
 

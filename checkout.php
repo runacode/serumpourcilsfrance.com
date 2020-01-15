@@ -1,8 +1,10 @@
 <?php
 
 include 'includes/data.php';
-
-$city = dirname(__FILE__) . "/checkout-" . strtoupper($data->country_1) . ".php";
+$nostatecheckout =['DE','FR','UK'];
+if(in_array(strtoupper($data->country1),$nostatecheckout)) {
+    $city = dirname(__FILE__) . "/checkout-no-state.php";
+}
 if (file_exists($city)) {
     require_once($city);
     die();

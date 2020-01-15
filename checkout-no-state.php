@@ -273,7 +273,7 @@ $ksdk = new KonnektiveSDK($pageType, $deviceType);
             setTimeout(Load, 200);
             return;
         }
-        var States=window.kform.states.<?php echo strtoupper($data->country1); ?>;
+        var States=window.kform.states.<?php echo strtoupper($data->country_1); ?>;
         $(Object.keys(States)).each(function (i, item) {
             $("[name='city']").append($('<option />').val(States[item]).text(States[item]))
         })
